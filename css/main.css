@@ -28,6 +28,27 @@ a {
   font-weight: bold;
 }
 
+.square {
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  display: inline-block;
+  margin-bottom: 2px;
+  overflow: hidden;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.square:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  background-color: #c300ff;
+}
+
 nav {
   position: fixed;
   right: 0;
@@ -83,8 +104,8 @@ header svg {
 }
 
 h1 {
-  font-size: 3rem;
-  margin-top: 2em;
+  font-size: 2rem;
+  margin-top: 7em;
   line-height: 2rem;
 }
 
@@ -108,7 +129,7 @@ section.hero {
 section.hero .down-arrow {
   stroke: white;
   position: absolute;
-  bottom: 2em;
+  bottom: -2.8em;
   width: .7em;
   animation: moveArrow 1s alternate-reverse infinite;
 }
@@ -119,9 +140,13 @@ section.hero .down-arrow path {
 
 section.hero h1 {
   margin-left: 0.3em;
-  margin-top: 8em;
+  margin-top: 7em;
   text-align: left;
-  line-height: 6rem;
+  line-height: 3rem;
+}
+
+.more-info {
+  margin-top: 9em;
 }
 
 .more-info img {
@@ -145,14 +170,74 @@ section.hero h1 {
           transform: translateX(0%);
 }
 
+@media only screen and (min-width: 729px) and (max-width: 899px) {
+  section.hero {
+    height: 43vh;
+  }
+  section.hero h1 {
+    margin-top: 17em;
+  }
+  section.hero .down-arrow {
+    bottom: 2em;
+  }
+  section.hero .subhead {
+    font-size: 1.4rem;
+    margin-left: 0.5em;
+    margin-top: 2em;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 450px) {
+  section.hero {
+    height: 55vh;
+  }
+  section.hero h1 {
+    margin-top: 8em;
+    font-size: 2rem;
+    margin-bottom: 2.2em;
+  }
+  section.hero .subhead {
+    font-size: 1.4rem;
+    margin-left: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  section.hero {
+    height: 55vh;
+  }
+  section.hero h1 {
+    margin-top: 5.5em;
+    font-size: 2rem;
+  }
+  section.hero .subhead {
+    font-size: 1rem;
+    margin-left: 0.5em;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   body {
     margin: 1.5em 5em;
     font-family: 'Poppins', sans-serif;
   }
+  body .hero-img {
+    height: 133vh;
+  }
+  section.hero {
+    height: 45vh;
+  }
+  section.hero h1 {
+    margin-top: 16em;
+  }
+  section.hero .subhead {
+    margin-left: 0.5em;
+  }
 }
 
-@media only screen and (min-width: 920px) {
+@media only screen and (min-width: 900px) {
   .menu {
     display: none;
   }
@@ -206,14 +291,14 @@ section.hero h1 {
     position: unset;
     stroke: black;
     width: 0.7em;
-    margin-top: 8em;
+    margin-top: 6em;
   }
   section.hero .down-arrow path {
     fill: black;
   }
   section.hero h1 {
     margin-left: 0;
-    margin-top: 2em;
+    margin-top: 3em;
     text-align: left;
     line-height: 6rem;
   }
@@ -224,6 +309,12 @@ section.hero h1 {
     color: black;
     -webkit-backdrop-filter: none;
             backdrop-filter: none;
+  }
+  .more-info {
+    margin-left: 8em;
+  }
+  .wrapper {
+    margin: auto;
   }
   .feature {
     display: -ms-grid;
@@ -249,6 +340,9 @@ section.hero h1 {
     grid-area: left;
   }
   .feature.left .content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: right;
     text-align: left;
     width: 25em;
     -ms-grid-column-align: left;
@@ -260,6 +354,9 @@ section.hero h1 {
   .wrapper {
     width: 1200px;
     margin: 0 auto;
+  }
+  nav {
+    margin-left: 10em;
   }
   .feature {
     gap: 0;
