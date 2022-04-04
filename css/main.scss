@@ -160,7 +160,41 @@ section.hero {
      transform: translateX(0%);
  }
 
+ .contact_title {
+     color: black;
+     margin-left: 40px;
+     font-size: 20px;
+     
+ }
+ .contact {
+     margin-left: 40px;
+     font-size: 16px;
+ }
 
+ .github {
+
+     .gitname {
+        margin-left: 17px;
+        font-size: 16px;
+        vertical-align: super;
+     }
+     .gitimage {
+         margin-top: 30px;
+
+     }
+  }
+
+ .emailicon {
+     margin-top: 20px;
+     height: 39px;
+
+ }
+ .emailaddress {
+    margin-left: 10px;
+    font-size: 16px;
+    vertical-align: super;
+
+ }
 
  @media only screen and (min-width: 729px) and (max-width:899px) { 
     section.hero {
@@ -423,4 +457,5 @@ section.hero {
         opacity: 1;
     }
 }
+
 
