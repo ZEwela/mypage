@@ -5,14 +5,15 @@ body {
 
 a {
     text-decoration: none;
-    font-size: 1.3rem ;
+    font-size: 1.6rem ;
 }
 
+// HEADER
 .hero-img {
     position: absolute;
     top: 0;
     left: 0;
-    background: url('../images/me.jpeg');
+    background: url('../images/daniele-levis-pelusi-Vey6fioB1eI-unsplash.jpeg');
     background-size: cover;
     background-position-x: 10%;
     background-position-y: 10%;
@@ -20,14 +21,14 @@ a {
     height: 100vh;
     z-index: -1;
     animation: introLoad 2s forwards;
-    // overflow: hidden;
+    opacity: 70%;
+     overflow: hidden;
 }
 
 .logo {
     color: white;
     font-weight: bold;
 }
-
 
 .square {
     height: 10px;
@@ -38,7 +39,6 @@ a {
     overflow: hidden;
     transition-duration: 0.8s;
     transition-property: transform;
-    // animation:  moveSquare 1s alternate-reverse infinite;
 }
 
 .square:hover {
@@ -47,6 +47,66 @@ a {
     background-color: rgb(195, 0, 255);
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+        width: 2.5em;
+        margin-top: -.6em;
+        cursor: pointer;
+    }
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 7em;
+    line-height: 2rem;
+}
+
+.subhead {
+    font-size: 1.4rem;
+    margin-left: 1em;
+    margin-top: -1.2em;
+    color: black;
+}
+
+section.hero {
+    color: black;
+    height: 50vh;
+    animation: moveDown 1s ease-in-out forwards; 
+    opacity: 0;
+    position: relative;
+
+    .down-arrow {
+        stroke: white;
+        position: absolute;
+        bottom: 13em;
+        width: .7em;
+        animation:  moveArrow 1s alternate-reverse infinite;
+
+        path {
+            fill:white;
+        }
+    }
+
+    h1 {
+        margin-left: 0.3em;
+        margin-top: 7em;
+        text-align: left;
+        line-height: 3rem;
+    }
+
+    .emoji {
+        left: 20%;
+        float: right;
+        // margin-top: 27.5%;
+        width: 30vh;
+
+    }
+}
+
+// NAVIGATION
 nav {
     position: fixed;
     right: 0;
@@ -77,6 +137,9 @@ nav {
     }
 
 }
+.open-nav {
+    transform: translateX(0%);
+}
 
 .close {
     float: right;
@@ -84,118 +147,186 @@ nav {
     width: 2.5em;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
+// PROJECTS SECTION
+.projects-info {
+    .projects {
+        text-align: center;
+        margin-bottom: 4em;
 
-    svg {
-        width: 2.5em;
-        margin-top: -.6em;
-        cursor: pointer;
+        .title {
+            margin-top: 7px;
+            padding-top: 5%;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-bottom: 3em; 
+        }
+        .list-of-projects {
+            list-style: none;
+            display: flex;
+            flex-flow: column wrap;
+            height: 100px;
+            align-content: space-around;
+            gap:40px;
+    
+            a {
+                color: rgb(46, 45, 45);
+                font-size: 20px;
+                width: 20%;
+                height: 20%;
+            }
+            img {
+                width: 10%;
+                height: 10%;
+            }
+        }
+    
     }
 }
+.projects-background {
+    position: absolute;
+    left: 0;
+    background-image: linear-gradient(rgb(248, 199, 227), rgb(252, 247, 249));
+    width: 100%;
+    height: 40%;
+    z-index: -1;
+    opacity: 60%;
 
-h1 {
-    font-size: 2rem;
-    margin-top: 7em;
-    line-height: 2rem;
 }
 
-.subhead {
-    font-size: 1.4rem;
-    margin-left: 1em;
-    margin-top: -1.2em;
-    color: white;
-    backdrop-filter: blur(5px);
-    
-}
+// SKILLS SECTION
+.skills {
+    text-align: center;
+    margin-bottom: 5em;
+    overflow: hidden;
+    padding-left: 20%;
+    padding-right: 20%;
 
-section.hero {
-    color: white;
-    height: 50vh;
-    animation: moveDown 1s ease-in-out forwards; 
-    opacity: 0;
+    .title {
+        padding-top: 5%;
+        font-weight: bold;
+        font-size: 1.25rem;
+        margin-bottom: 2em; 
+    }
 
-    .down-arrow {
-        stroke: white;
-        position: absolute;
-        bottom: -2.8em;
-        width: .7em;
-        animation:  moveArrow 1s alternate-reverse infinite;
+    .list-of-skills {
 
-        path {
-            fill:white;
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        gap:9%;
+        justify-content: space-around;
+
+        .skill-icon {     
+            width: 130%;
         }
     }
 
-    h1 {
-        margin-left: 0.3em;
-        margin-top: 7em;
-        text-align: left;
-        line-height: 3rem;
-    }
 }
 
-.more-info {
-    margin-top: 9em;
-
-    img {
-        width: 100%;
-        object-fit: cover;
-        height: 30em;
-
-    }
-
-    .title {
-        font-weight: bold;
-        font-size: 1.25rem;
-    }
-
-    .desc {
-        line-height: 1.5rem;
-    }
+.skills-background {
+    position: absolute;
+    left: 0;
+    background-image: linear-gradient(rgb(216, 176, 216), rgb(250, 250, 250));
+    width: 100%;
+    height: 40%;
+    z-index: -1;
+    opacity:60%;
 }
 
- .open-nav {
-     transform: translateX(0%);
- }
 
- .contact_title {
-     color: black;
-     margin-left: 40px;
+// CONTACT SECTION
+ #contact {
+     padding-top: 0.5%;
      font-size: 20px;
-     
+     text-align: center;
+     font-weight: bold;
+
+
  }
- .contact {
-     margin-left: 40px;
-     font-size: 16px;
+
+ .content .title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 2em; 
  }
 
- .github {
+.contact-background {
+    position: absolute;
+    left: 0;
+    background: rgb(243, 241, 241);
+    background-size: cover;
+    width: 100%;
+    z-index: -1;
+    opacity:100%;
+    margin-top: -2em;
+}
 
-     .gitname {
-        margin-left: 17px;
-        font-size: 16px;
-        vertical-align: super;
-     }
-     .gitimage {
-         margin-top: 30px;
+//  FOOTER
+footer {
+    margin-top: 30px;
+    display: flex;
+    text-align: center;
+    height: 80px;
+    width: 100%;
 
-     }
+    a {
+        margin-top: 20px;
+        width: 100%;
+        padding: 0%;
+        
+        &:hover {
+            background: rgb(238, 236, 236);
+            border-radius: 20%;
+            opacity: 60%;
+        }
+    }
+
+    .icons {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        height:120%;
+        .icon {
+            width: 7vh;
+
+         }
+    }
+}
+
+.icons-describtion {
+    display:inline;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    p {
+        width: 50%;
+        height: 50%; 
+    }
   }
+.end {
+    display: grid;
+    #sign {
+        text-align: center;
+        width: 100%;
+      } 
+    .arrow-up {
+        position: absolute;
+        background-color: white;
+        border: 1px solid;
+        padding: 10px;
+        right:4%;
+        
+        &:hover {
+            box-shadow: 10px 10px 0px 0px rgb(139, 135, 135);
+            transform: translate(5px, -5px);
+            transition: 0.2s all ease-in-out;
+        }
+    }
+}
 
- .emailicon {
-     margin-top: 20px;
-     height: 39px;
 
- }
- .emailaddress {
-    margin-left: 10px;
-    font-size: 16px;
-    vertical-align: super;
 
- }
-
+// MEDIA 
  @media only screen and (min-width: 729px) and (max-width:899px) { 
     section.hero {
         height: 43vh;
@@ -212,14 +343,13 @@ section.hero {
             font-size: 1.4rem;
             margin-left: 0.5em;
             margin-top: 2em;
-            backdrop-filter: blur(5px);
         }
     }
  }
 
 @media only screen and (min-width:376px) and (max-width:450px) {
    section.hero {
-       height: 55vh;
+       height: 63vh;
        h1 {
         margin-top: 8em;
         font-size: 2rem;
@@ -231,7 +361,6 @@ section.hero {
         margin-left: 0.5em;
     }
    }
-
 }
 
 @media only screen and (max-width: 375px) { 
@@ -250,7 +379,9 @@ section.hero {
         }
 
     }
-
+    .projects-info {
+        margin-top: 38.6%;
+    }
 }
 
 @media only screen and (min-width: 600px) { 
@@ -259,7 +390,7 @@ section.hero {
         font-family: 'Poppins', sans-serif;
         
         .hero-img {
-            height: 133vh;
+            height: 100vh;
         }
     } 
     
@@ -299,10 +430,10 @@ section.hero {
             margin: 0;
 
             a {
-                color: white;
+                color: black;
                 width: auto;
                 padding: .5em 1.5em;
-                font-size: .9rem;;
+                font-size: 1.2rem;;
                 
                 &:hover {
                     background: none;
@@ -329,15 +460,15 @@ section.hero {
 
     section.hero {
         color: black;
-        height: auto;
+        height: 100%;
         width: 40%;
-        margin-bottom: 17em;
+        margin-bottom: 30.7em;
 
         .down-arrow {
-            position: unset;
+            position: absolute;
             stroke: black;
             width: 0.7em;
-            margin-top: 6em;
+            top: 19em;
     
             path {
                 fill:black;
@@ -364,13 +495,14 @@ section.hero {
         }
     }
 
-    .more-info {
-        margin-left: 8em;
+    .projects {
+        padding-top: 0;
     }
+    // .more-info {
+    //     margin-left: 0em;
+    // }
 
-    .wrapper {
-        margin: auto;
-    }
+
 
     .feature {
         display: grid;
@@ -406,10 +538,7 @@ section.hero {
 }
 
 @media only screen and (min-width: 1200px) {
-    .wrapper {
-        width: 1200px;
-        margin: 0 auto;
-    }
+
 
     nav {
         margin-left: 10em;
@@ -417,6 +546,9 @@ section.hero {
 
     .feature {
         gap: 0;
+    }
+    .projects {
+        padding-top: 0;
     }
 }
 
@@ -430,14 +562,6 @@ section.hero {
  }
 
  
-//  @keyframes moveSquare {
-//     from {
-//       transform: translateY(-2px);
-//     }
-//     to {
-//         transform: translateY(0);
-//     }
-// }
 
  @keyframes moveArrow {
     from {
