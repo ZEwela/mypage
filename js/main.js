@@ -1,19 +1,25 @@
 const btnMenu = document.querySelector('#btnMenu');
+const header = document.querySelector('.header');
+const overlay = document.querySelector('.overlay');
 
-btnMenu.addEventListener('click', function(){
+btnMenu.addEventListener('click', function(){ 
     console.log('clik open menu');
 
-    if (btnMenu.classList.contains('open')) {
-        btnMenu.classList.remove('open')
+    if (header.classList.contains('open')) { // Close btnMenu
+        header.classList.remove('open');
+        overlay.classList.remove('fade-in');
+        overlay.classList.add('fade-out');
     } 
-    else {
-        btnMenu.classList.add('open')
+    else { // Open btn Menu
+        header.classList.add('open'); 
+        overlay.classList.remove('fade-out');
+        overlay.classList.add('fade-in');
     }
-    
 })
+ 
 
 
-
+//  Old version
 const menu = document.querySelector('.menu')
 const close = document.querySelector('.close')
 const nav = document.querySelector('nav')
@@ -38,23 +44,3 @@ arrowUp.addEventListener("click", scrollToTop)
 
 
 
-
-
-// const showOnPx = 100;
-
-// const arrowBox = () => {
-//   return document.documentElement || document.body;
-// };
-
-// document.addEventListener("scroll", () => {
-//   if (arrowBox().scrollTop > showOnPx) {
-//     arrowUp.classList.remove("hidden")
-//   } else {
-//     arrowUp.classList.add("hidden")
-//   }
-// });
-//  const goToTop = () => {
-//     document.body.scrollIntoView();
-//   };
-  
-//   arrowUp.addEventListener("click", goToTop)

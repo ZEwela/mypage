@@ -1,3 +1,84 @@
+/* Use create keyframes to create animation 
+    @keyframes here-name-of-animation  {
+        from {
+            initial styles
+        }
+        50% {
+        } 
+        78% {
+        } 
+        to {
+            final state
+        }
+    }
+*/
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 300ms ease-in-out forwards;
+          animation: fade-in 300ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 300ms ease-in-out forwards;
+          animation: fade-out 300ms ease-in-out forwards;
+}
+
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -70,6 +151,35 @@ button, .button {
   }
 }
 
+.header.open .overlay {
+  display: block;
+}
+
+.header.open .header__menu > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header.open .header__menu > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__menu > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  top: 3.75rem;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c300ff), to(transparent));
+  background-image: linear-gradient(#c300ff, transparent);
+}
+
 .header nav {
   padding: 1.0625rem 1.5rem;
 }
@@ -82,6 +192,27 @@ button, .button {
 
 .header__logo span {
   color: red;
+}
+
+.header__logo .square {
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  display: inline-block;
+  margin-bottom: 1px;
+  overflow: hidden;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.header__logo .square:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  background-color: #c300ff;
 }
 
 .header__menu > span {
@@ -97,20 +228,6 @@ button, .button {
 
 .header__menu > span:not(:last-child) {
   margin-bottom: 5px;
-}
-
-.header__menu.open > span:first-child {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.header__menu.open > span:nth-child(2) {
-  opacity: 0;
-}
-
-.header__menu.open > span:last-child {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
 }
 
 .header__links a {
@@ -147,36 +264,5 @@ button, .button {
   opacity: 0;
   -webkit-transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in-out;
-}
-
-.header .square {
-  height: 10px;
-  width: 10px;
-  background-color: red;
-  display: inline-block;
-  margin-bottom: 1px;
-  overflow: hidden;
-  -webkit-transition-duration: 0.8s;
-          transition-duration: 0.8s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-}
-
-.header .square:hover {
-  transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  background-color: #c300ff;
-}
-
-.header .overlay {
-  position: fixed;
-  top: 3.75rem;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#c300ff), to(transparent));
-  background-image: linear-gradient(#c300ff, transparent);
 }
 /*# sourceMappingURL=style.css.map */
