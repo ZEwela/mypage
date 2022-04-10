@@ -1,3 +1,19 @@
+const btnMenu = document.querySelector('#btnMenu');
+
+btnMenu.addEventListener('click', function(){
+    console.log('clik open menu');
+
+    if (btnMenu.classList.contains('open')) {
+        btnMenu.classList.remove('open')
+    } 
+    else {
+        btnMenu.classList.add('open')
+    }
+    
+})
+
+
+
 const menu = document.querySelector('.menu')
 const close = document.querySelector('.close')
 const nav = document.querySelector('nav')
