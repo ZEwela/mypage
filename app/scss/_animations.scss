@@ -54,3 +54,23 @@
 .fade-out {
     animation: fade-out 200ms ease-in-out forwards; 
 }
+
+// Arrow top-down
+@keyframes moveArrow {
+    from {
+      transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveDown {
+    from {
+      transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}  

@@ -29,8 +29,35 @@ a, a:visited, a:hover {
 
 // Spacing
 .container {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem ;
+    max-width: 69.375rem;
+    margin: auto; 
+
+    &--pall {
+        padding-top: 2.25rem;
+        padding-right: 1.5rem; 
+        padding-bottom: 2.25rem;   
+        padding-left: 1.5rem;
+    }
+    &--py {
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem; 
+    }
+    &--px {
+        padding-right: 1.5rem; 
+        padding-left: 1.5rem;
+    }
+    &--pt {
+        padding-top: 2.25rem;  
+    }
+    &--pr {
+        padding-right: 1.5rem; 
+    }
+    &--pb {
+        padding-bottom: 2.25rem;   
+    }
+    &--pl {
+        padding-left: 1.5rem;
+    }
 }
 
 // Flexbox 
@@ -52,6 +79,7 @@ a, a:visited, a:hover {
 
 // Buttons
 button, .button {
+    display: inline-block;
     padding: 1rem 1.875rem;
     border: none;
     border-radius: 50px;
@@ -59,6 +87,12 @@ button, .button {
     background-color: $middleGrey;
     color: $white;
     font-weight: 400;
+    transition: opacity 300ms ease-in-out;
+    font-size: $font-sm;
+
+    &:hover {
+        opacity: 0.75%;
+    }
 }
 
 // Visibility
