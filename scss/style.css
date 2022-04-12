@@ -540,7 +540,6 @@ button:hover, .button:hover {
 }
 
 .feature__intro {
-  padding-left: 1rem;
   margin-bottom: 3.75rem;
 }
 
@@ -582,6 +581,17 @@ button:hover, .button:hover {
 
 .feature__icon {
   margin-bottom: 1.4rem;
+  border: 1px solid rgba(65, 65, 65, 0.1);
+  text-align: center;
+  padding-top: 0.5625rem;
+  background-color: rgba(224, 223, 223, 0.1);
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.feature__icon:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @media (min-width: 64em) {
@@ -618,5 +628,63 @@ button:hover, .button:hover {
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 2rem;
+}
+
+.skills {
+  background-color: #f6e4e4;
+}
+
+.skill__content {
+  text-align: center;
+}
+
+@media (min-width: 40em) {
+  .skill__content {
+    text-align: left;
+  }
+}
+
+.skill__content h2 {
+  margin-bottom: 3.75rem;
+}
+
+.skill__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 40em) {
+  .skill__grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .skill__grid {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.skill__item {
+  padding: 0.9375rem;
+  text-align: center;
+  -webkit-box-shadow: 0px 3px 12px rgba(46, 46, 46, 0.5);
+          box-shadow: 0px 3px 12px rgba(46, 46, 46, 0.5);
+  border-radius: 2%;
+}
+
+.skill__image {
+  margin-bottom: 1.1rem;
+}
+
+@media (min-width: 64em) {
+  .skill__image {
+    margin-bottom: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
