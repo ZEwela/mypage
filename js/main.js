@@ -28,27 +28,27 @@ btnMenu.addEventListener('click', function(){
 
 
 //  Old version
-const menu = document.querySelector('.menu')
-const close = document.querySelector('.close')
-const nav = document.querySelector('nav')
-const arrowUp = document.querySelector('.arrow-up')
-const rootElement = document.documentElement
+// const menu = document.querySelector('.menu')
+// const close = document.querySelector('.close')
+// const nav = document.querySelector('nav')
+// const arrowUp = document.querySelector('.arrow-up')
+// const rootElement = document.documentElement
 
-menu.addEventListener('click', () => {
-    nav.classList.add('open-nav')
-})
-close.addEventListener('click', () => {
-    nav.classList.remove('open-nav')
-})
+// menu.addEventListener('click', () => {
+//     nav.classList.add('open-nav')
+// })
+// close.addEventListener('click', () => {
+//     nav.classList.remove('open-nav')
+// })
 
-const scrollToTop = () => {
-    rootElement.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    })
-}
+// const scrollToTop = () => {
+//     rootElement.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//     })
+// }
 
-arrowUp.addEventListener("click", scrollToTop)
+// arrowUp.addEventListener("click", scrollToTop)
 
 
 

@@ -65,7 +65,7 @@ a, a:visited, a:hover {
         padding-bottom: 4.375rem;   
         padding-left: 4rem;
 
-        @include breakpoints-up(large) {
+        @include breakpoint-up(large) {
             padding-top: 6rem;
             padding-bottom: 6rem;
         }
@@ -81,7 +81,7 @@ a, a:visited, a:hover {
     &--pt {
         padding-top: 4.375rem; 
         
-        @include breakpoints-up(large) {
+        @include breakpoint-up(large) {
             padding-top: 6rem;
         }
     }
@@ -91,7 +91,7 @@ a, a:visited, a:hover {
     &--pb {
         padding-bottom: 4.375rem;  
         
-        @include breakpoints-up(large) {
+        @include breakpoint-up(large) {
             padding-bottom: 6rem;
         }
     }

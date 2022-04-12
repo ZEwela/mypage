@@ -88,8 +88,8 @@
 
 @-webkit-keyframes moveArrow {
   from {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   to {
     -webkit-transform: translateY(0);
@@ -99,8 +99,8 @@
 
 @keyframes moveArrow {
   from {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   to {
     -webkit-transform: translateY(0);
@@ -187,14 +187,22 @@ a, a:visited, a:hover {
 }
 
 .container {
+  max-width: 69.375rem;
   margin: auto;
 }
 
 .container--pall {
   padding-top: 4.375rem;
   padding-right: 4rem;
-  padding-bottom: 4.375 rem;
+  padding-bottom: 4.375rem;
   padding-left: 4rem;
+}
+
+@media (min-width: 64em) {
+  .container--pall {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 .container--py {
@@ -211,12 +219,24 @@ a, a:visited, a:hover {
   padding-top: 4.375rem;
 }
 
+@media (min-width: 64em) {
+  .container--pt {
+    padding-top: 6rem;
+  }
+}
+
 .container--pr {
   padding-right: 4rem;
 }
 
 .container--pb {
   padding-bottom: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .container--pb {
+    padding-bottom: 6rem;
+  }
 }
 
 .container--pl {
@@ -435,7 +455,7 @@ button:hover, .button:hover {
 
 .hero__image {
   position: relative;
-  background-image: url("../../images/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpeg");
+  background-image: url("/images/pawel-czerwinski-ruJm3dBXCqw-unsplash.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -459,7 +479,7 @@ button:hover, .button:hover {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url("../../images/girl_emoji.svg");
+  background-image: url("/images/girl_emoji.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
 }
@@ -493,13 +513,13 @@ button:hover, .button:hover {
 
 .hero .arrow {
   content: "";
-  height: 7rem;
+  height: 8rem;
 }
 
 .hero .arrow img {
   stroke: white;
   position: absolute;
-  width: .7em;
+  width: .6em;
   animation: moveArrow 1.5s alternate-reverse infinite;
   left: 50%;
 }
@@ -510,6 +530,13 @@ button:hover, .button:hover {
 
 .feature {
   background-color: #fcf7f9;
+  text-align: center;
+}
+
+@media (min-width: 40em) {
+  .feature {
+    text-align: left;
+  }
 }
 
 .feature__intro {
@@ -554,12 +581,12 @@ button:hover, .button:hover {
 }
 
 .feature__icon {
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.4rem;
 }
 
 @media (min-width: 64em) {
   .feature__icon {
-    margin-bottom: 2.75rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -573,7 +600,7 @@ button:hover, .button:hover {
   font-weight: 300;
   line-height: 1.15;
   color: #3b3a3a;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .feature__title a {
@@ -583,12 +610,13 @@ button:hover, .button:hover {
 @media (min-width: 64em) {
   .feature__title {
     font-size: 1.5rem;
-    margin-bottom: 2.125rem;
+    margin-bottom: 1.5rem;
   }
 }
 
 .feature__description {
   font-size: 0.875rem;
   line-height: 1.5;
+  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

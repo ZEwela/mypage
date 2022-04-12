@@ -1,6 +1,7 @@
 .feature {
-    text-align: center;
+
     background-color: $toWhiteRose;
+    text-align: center;
     
 
     @include breakpoint-up(medium) {
