@@ -43,29 +43,25 @@
             text-align: left;
         }
 
-        h1 {
-            font-weight: 300;
-            font-size: $font-lg;
-            line-height: 1.15;
-
-            @include breakpoint-up(large) {
-                font-size: $font-xlg;
-            }
-        }
         p {
             font-size: $font-med;  
         }
 
     }
-    img {
-        stroke: white;
-        position: absolute;
-        width: .7em;
-        animation: moveArrow 1.5s alternate-reverse infinite;
-        left: 50%; 
 
-        path {
-            fill:white;
-        }
+    .arrow {
+        content: "";
+        height: 8rem;   
+        img {
+            stroke: white;
+            position: absolute;
+            width: .6em;
+            animation: moveArrow 1.5s alternate-reverse infinite;
+            left: 50%; 
+    
+            path {
+                fill:white;
+            }
+        } 
     }
 }
