@@ -11,11 +11,12 @@
         background-repeat: no-repeat;
         background-position: center center;
         min-height: 17.5rem;
+        z-index: -1;
 
         @include breakpoint-up(large) {
-        flex: 3;
-        order: 2;
-        min-height: 41rem;
+            flex: 3;
+            order: 2;
+            min-height: 41rem;
         }
 
         &::before {

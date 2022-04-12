@@ -333,6 +333,7 @@ button:hover, .button:hover {
   padding-bottom: 1.0625rem;
   padding-right: 1.5rem;
   background-color: white;
+  z-index: 2;
 }
 
 @media (min-width: 64em) {
@@ -397,6 +398,7 @@ button:hover, .button:hover {
   padding: 1.625rem;
   margin-top: 1.5rem;
   border-radius: 5px;
+  z-index: 1;
 }
 
 .header__menu a {
@@ -460,6 +462,7 @@ button:hover, .button:hover {
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 17.5rem;
+  z-index: -1;
 }
 
 @media (min-width: 64em) {

@@ -3,6 +3,7 @@ const body = document.querySelector('body');
 const header = document.querySelector('.header');
 const overlay = document.querySelector('.overlay');
 const fadeElems = document.querySelectorAll('.has-fade');
+const menu = document.querySelector('.header__menu');
 
 btnMenu.addEventListener('click', function(){ 
     console.log('clik open menu');
@@ -23,6 +24,16 @@ btnMenu.addEventListener('click', function(){
             element.classList.add('fade-in');
         })
     }
+})
+
+menu.addEventListener('click', function(){
+    console.log('click menu');
+    body.classList.remove('noscroll');
+    header.classList.remove('open');
+    fadeElems.forEach(function(element){
+        element.classList.remove('fade-in');
+        element.classList.add('fade-out');
+    })
 })
  
 
