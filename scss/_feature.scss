@@ -1,5 +1,4 @@
 .feature {
-
     background-color: $toWhiteRose;
     text-align: center;
     
@@ -9,12 +8,8 @@
     }
 
     &__intro {
-        // padding-left: 1rem;
         margin-bottom: 3.75rem;
-
-        @include breakpoint-up(large) {
-            width: 60%;
-        }
+        text-align: center;
     }
 
     &__grid {

@@ -1,7 +1,7 @@
 .hero {
     @include breakpoint-up(large) {
         display: flex;
-        align-items: cen ter; 
+        align-items: center; 
     }
 
     &__image {

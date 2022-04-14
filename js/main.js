@@ -4,6 +4,8 @@ const header = document.querySelector('.header');
 const overlay = document.querySelector('.overlay');
 const fadeElems = document.querySelectorAll('.has-fade');
 const menu = document.querySelector('.header__menu');
+const arrowUp = document.querySelector('#arrow-up')
+const rootElement = document.documentElement
 
 btnMenu.addEventListener('click', function(){ 
     console.log('clik open menu');
@@ -26,6 +28,7 @@ btnMenu.addEventListener('click', function(){
     }
 })
 
+// fade overlay when clicking on header__menu
 menu.addEventListener('click', function(){
     console.log('click menu');
     body.classList.remove('noscroll');
@@ -35,31 +38,16 @@ menu.addEventListener('click', function(){
         element.classList.add('fade-out');
     })
 })
+
+const scrollToTop = () => {
+    rootElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}
+
+arrowUp.addEventListener("click", scrollToTop)
  
-
-
-//  Old version
-// const menu = document.querySelector('.menu')
-// const close = document.querySelector('.close')
-// const nav = document.querySelector('nav')
-// const arrowUp = document.querySelector('.arrow-up')
-// const rootElement = document.documentElement
-
-// menu.addEventListener('click', () => {
-//     nav.classList.add('open-nav')
-// })
-// close.addEventListener('click', () => {
-//     nav.classList.remove('open-nav')
-// })
-
-// const scrollToTop = () => {
-//     rootElement.scrollTo({
-//         top: 0,
-//         behavior: "smooth"
-//     })
-// }
-
-// arrowUp.addEventListener("click", scrollToTop)
 
 
 

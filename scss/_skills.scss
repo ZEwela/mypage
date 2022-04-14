@@ -1,15 +1,11 @@
 .skills {
-    background-color: $ultraLightRed;
+    background-color: $ultraLightRose;
 }
 
 .skill {
 
     &__content {
         text-align: center;
-
-        @include breakpoint-up(medium) {
-            text-align: left;
-        }
 
         h2 {
             // padding-left: 1rem;
@@ -35,7 +31,7 @@
     &__item {
         padding: 0.9375rem;
         text-align: center;
-        box-shadow: 0px 3px 12px rgba(46, 46, 46, 0.5);
+        box-shadow: 4px 9px 24px rgba(32, 9, 9, 0.5);
         border-radius: 2%;
     }
 
