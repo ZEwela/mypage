@@ -1,0 +1,95 @@
+.footer {
+
+    text-align: center;
+    background-color: $lightRose;
+    color: $white;
+    padding: 2.5rem;
+
+    h2 {
+        margin-bottom: 3rem;
+        color: $white;
+        font-size: 1.7rem;
+    }
+
+    &__grid {
+
+        margin-bottom: 1.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+    }
+
+    &__icon {
+     
+        img {
+            width: 3rem;
+            margin-bottom: 0.7rem;
+        }
+
+        :hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__text {
+        font-size: 1rem;
+    }
+
+    &__sign {
+        font-size: $font-sm;
+    }
+
+    &__upBtn {
+
+        display: inline-block;
+        border: 1px solid;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: $lightPastelRose;
+        transition: opacity 300ms ease-in-out;
+        width: 5rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.1rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+
+        &:hover {
+            opacity: 50%;
+
+        }
+
+        img {
+            width: 2rem;
+        }
+    }
+
+    &__end {
+
+        @include breakpoint-up(medium) {
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 5px;
+                background: $ultraLightRose;
+                left: 40rem;
+                right: 40rem;
+                opacity: 10%;
+                width: calc(100% - 25rem);
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        
+    }
+
+
+}

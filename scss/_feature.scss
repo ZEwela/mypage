@@ -1,0 +1,79 @@
+.feature {
+    background-color: $toWhiteRose;
+    text-align: center;
+    
+
+    @include breakpoint-up(medium) {
+        text-align: left;
+    }
+
+    &__intro {
+        margin-bottom: 3.75rem;
+        text-align: center;
+    }
+
+    &__grid {
+
+        @include breakpoint-up(medium) {
+           display: flex; 
+           flex-wrap: wrap;
+        }
+    } 
+
+    &__item {
+        padding: 0.9375rem;
+        
+        @include breakpoint-up(medium) {
+            flex: 0 0 50%;
+        }
+
+        @include breakpoint-up(large) {
+            flex: 1;
+        } 
+    }
+
+    &__icon {
+        margin-bottom: 1.4rem;
+        border: 1px solid rgba(65, 65, 65, 0.1);
+        text-align: center;
+        padding-top: 0.5625rem;
+        background-color: rgba(224, 223, 223, 0.1);
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        @include breakpoint-up(large) {
+            margin-bottom: 2rem;
+        }
+
+       img {
+            height: 50%;
+            width: 50%;
+       }
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 1.15;
+        color: $lightBlack;
+        margin-bottom: 1rem;
+        
+        a {
+            color: $lightBlack;
+        }
+        @include breakpoint-up(large) {
+            font-size: 1.5rem; 
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__description {
+         font-size: 0.875rem;
+         line-height: 1.5;
+         margin-bottom: 2rem;
+    }
+}
+

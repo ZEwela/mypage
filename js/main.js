@@ -1,14 +1,42 @@
-const menu = document.querySelector('.menu')
-const close = document.querySelector('.close')
-const nav = document.querySelector('nav')
-const arrowUp = document.querySelector('.arrow-up')
+const btnMenu = document.querySelector('#btnMenu');
+const body = document.querySelector('body');
+const header = document.querySelector('.header');
+const overlay = document.querySelector('.overlay');
+const fadeElems = document.querySelectorAll('.has-fade');
+const menu = document.querySelector('.header__menu');
+const arrowUp = document.querySelector('#arrow-up')
 const rootElement = document.documentElement
 
-menu.addEventListener('click', () => {
-    nav.classList.add('open-nav')
+btnMenu.addEventListener('click', function(){ 
+    console.log('clik open menu');
+
+    if (header.classList.contains('open')) { // Close btnMenu
+        body.classList.remove('noscroll');
+        header.classList.remove('open');
+        fadeElems.forEach(function(element){
+            element.classList.remove('fade-in');
+            element.classList.add('fade-out');
+        })
+    } 
+    else { // Open btn Menu
+        body.classList.add('noscroll');
+        header.classList.add('open'); 
+        fadeElems.forEach(function(element){
+            element.classList.remove('fade-out');
+            element.classList.add('fade-in');
+        })
+    }
 })
-close.addEventListener('click', () => {
-    nav.classList.remove('open-nav')
+
+// fade overlay when clicking on header__menu
+menu.addEventListener('click', function(){
+    console.log('click menu');
+    body.classList.remove('noscroll');
+    header.classList.remove('open');
+    fadeElems.forEach(function(element){
+        element.classList.remove('fade-in');
+        element.classList.add('fade-out');
+    })
 })
 
 const scrollToTop = () => {
@@ -19,26 +47,7 @@ const scrollToTop = () => {
 }
 
 arrowUp.addEventListener("click", scrollToTop)
+ 
 
 
 
-
-
-// const showOnPx = 100;
-
-// const arrowBox = () => {
-//   return document.documentElement || document.body;
-// };
-
-// document.addEventListener("scroll", () => {
-//   if (arrowBox().scrollTop > showOnPx) {
-//     arrowUp.classList.remove("hidden")
-//   } else {
-//     arrowUp.classList.add("hidden")
-//   }
-// });
-//  const goToTop = () => {
-//     document.body.scrollIntoView();
-//   };
-  
-//   arrowUp.addEventListener("click", goToTop)

@@ -1,0 +1,49 @@
+.skills {
+    background-color: $ultraLightRose;
+}
+
+.skill {
+
+    &__content {
+        text-align: center;
+
+        h2 {
+            // padding-left: 1rem;
+            margin-bottom: 3.75rem;
+        }
+
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+
+    &__item {
+        padding: 0.9375rem;
+        text-align: center;
+        box-shadow: 4px 9px 24px rgba(32, 9, 9, 0.5);
+        border-radius: 2%;
+    }
+
+    &__image {
+        margin-bottom: 1.1rem;
+
+        @include breakpoint-up(large) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    // &__text {
+
+    // }
+}
